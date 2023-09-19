@@ -50,19 +50,7 @@ class FileMovementHandler():
                 path2 = to_dir + '/' + key
                 path3 = to_dir + '/' + key + '/' + file_name
 
-                if os.path.exists(path2):
-
-                    print("Diretório Existe...")
-                    print("Movendo " + file_name + "....")
-                    shutil.move(path1, path3)
-                    time.sleep(1)
-
-                else:
-                    print("Criando Diretório...")
-                    os.makedirs(path2)
-                    print("Movendo " + file_name + "....")
-                    shutil.move(path1, path3)
-                    time.sleep(1)
+                # condicional para over os arquivos
 
 # Inicialize a Classe Gerenciadora de Eventos
 
