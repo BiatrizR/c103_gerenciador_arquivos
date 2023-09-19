@@ -1,6 +1,6 @@
 # GERENCIADORES DE EVENTOS DO SISTEMA DE ARQUIVOS
 
-## sobre watchdog:
+## sobre watchdog: 🐶
 
 - No Python, um módulo watchdog pode ser usado para monitorar nosso sistema de arquivos para alterações como criação, modificação, movimentação ou exclusão de um arquivo ou de um diretório.
 
