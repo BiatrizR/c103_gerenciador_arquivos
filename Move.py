@@ -15,8 +15,8 @@ import shutil
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-from_dir = "D:/Users/Lenovo/Downloads"              # Adicione o caminho da sua pasta "Downloads".
-to_dir = "D:/Users/Lenovo/Desktop/proc103" # Crie a pasta "Arquivos_Documentos" em sua área de trabalho e atualize o caminho de acordo.
+from_dir = "C:/Users/nome/Downloads"              # Adicione o caminho da sua pasta "Downloads".
+to_dir = "C:/Users/Nome/Desktop/pasta" # Crie a pasta "Arquivos_Documentos" em sua área de trabalho e atualize o caminho de acordo.
 
 
 dir_tree = {
@@ -28,7 +28,7 @@ dir_tree = {
 
 # Classe Gerenciadora de Eventos
 
-class FileMovementHandler(FileSystemEventHandler):
+class FileMovementHandler():
     #código para genrenciar o evento de criação de um novo arquivo no diretório
 
     def on_created(self, event):
@@ -65,23 +65,16 @@ class FileMovementHandler(FileSystemEventHandler):
                     time.sleep(1)
 
 # Inicialize a Classe Gerenciadora de Eventos
-event_handler = FileMovementHandler()
+
 
 # Inicialize o Observer
-observer = Observer()
+
 
 # Agende o Observer
-observer.schedule(event_handler, from_dir, recursive=True)
+
 #: defina o valor do parâmetro recursive (recursivo) como True para observar as alterações em todos ossubdiretórios do caminho fornecido.
 
 
 # Inicie o Observer
-observer.start()
 
-try:
-    while True:
-        time.sleep(2)
-        print("executando...")
-except KeyboardInterrupt:
-    print("interrompido!")
-    observer.stop()
+## loop
